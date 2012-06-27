@@ -1,4 +1,4 @@
-# Thinreports::Handler
+# ThinreportsHandler
 ThinReporsHandler is constructed by Rails Template Handler [ThinReports](http://www.thinreports.org/ "ThinReposts") the PDF.
 
 ## Supported versions
@@ -67,13 +67,13 @@ end
 
 ### Configuration 
 
-### layout file
+### Layout file(.tlf) and options.
 
 To app/views/reports/index.tlf for example. 
 Write code like this to index.pdf.thinreports.
 
 ``` ruby
-report.set_layout 'reports/index'
+report.set_layout tlf: 'reports/index', default: true
 ```
 
 ### generate options.
