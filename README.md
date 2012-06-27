@@ -1,4 +1,4 @@
-# Thinreports::Handler
+# ThinreportsHandler
 ThinReporsHandler is constructed by Rails Template Handler [ThinReports](http://www.thinreports.org/ "ThinReposts") the PDF.
 
 ## Supported versions
@@ -23,12 +23,12 @@ Or install it yourself as:
 
 ## Usage
 
-### PDF is display in the browser.
+### Example to, Display in the browser.
 
 #### Controllers
 ``` ruby
 class OrdersController < ApplicationController
-  def def index
+  def index
     @orders = Order.all
   end
 end
@@ -39,7 +39,7 @@ end
 app/views/orders/index.pdf.thinreports 
 
 ``` ruby
-report.set_layout
+report.set_layout # ! <= Required. default use: orders/index.tlf
 report.start_new_page
 report.page.values printed_at: Time.now
 @orders.each do |order|
@@ -50,11 +50,11 @@ report.page.values printed_at: Time.now
 end
 ```
 
-### Download
+### Example to, Download PDF.
 
 ``` ruby
 class OrdersController < ApplicationController
-  def def index
+  def index
     @orders = Order.all
     respond_to do |format|
       format.pdf { 
@@ -67,13 +67,15 @@ end
 
 ### Configuration 
 
-### layout file
+### Layout file(.tlf) and options.
 
-To app/views/reports/index.tlf for example. 
-Write code like this to index.pdf.thinreports.
+Example of using the `app/views/reports/index.tlf`.
+Write code like this to `index.pdf.thinreports`.
+
+`:layout_options` is an option `ThinReports::Report::Base#use_layout` method.
 
 ``` ruby
-report.set_layout 'reports/index'
+report.set_layout tlf: 'reports/index', :layout_options => { default: true }
 ```
 
 ### generate options.
@@ -91,17 +93,17 @@ report.generate_options(security: {
 
 ### Partial
 
-For exsample to use, app/views/orders/_header.pdf.thinreports.
-title is local variable in _header.pdf.thinreports.
+For exsample to use, `app/views/orders/_header.pdf.thinreports`.
+`title` is local variable in `_header.pdf.thinreports`.
 
 ``` ruby
-report.partial 'header', title: title
+report.partial! 'header', title: title
 ```
 
 ## Authour
 
-TwitterID: @takeshinoda
-Blog: http://d.hatena.ne.jp/takeshinoda/
+* TwitterID: @takeshinoda
+* Blog: http://d.hatena.ne.jp/takeshinoda/
 
 ## Contributing
 
