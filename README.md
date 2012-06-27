@@ -28,7 +28,7 @@ Or install it yourself as:
 #### Controllers
 ``` ruby
 class OrdersController < ApplicationController
-  def def index
+  def index
     @orders = Order.all
   end
 end
@@ -54,7 +54,7 @@ end
 
 ``` ruby
 class OrdersController < ApplicationController
-  def def index
+  def index
     @orders = Order.all
     respond_to do |format|
       format.pdf { 
