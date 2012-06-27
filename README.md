@@ -95,7 +95,7 @@ For exsample to use, app/views/orders/_header.pdf.thinreports.
 title is local variable in _header.pdf.thinreports.
 
 ``` ruby
-report.partial 'header', title: title
+report.partial! 'header', title: title
 ```
 
 ## Authour
