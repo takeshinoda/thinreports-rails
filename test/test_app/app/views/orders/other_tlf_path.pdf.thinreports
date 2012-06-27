@@ -1,0 +1,8 @@
+report.set_layout :tlf => 'reports/other'
+report.partial! 'other_header', :current_time => Time.at(OrdersController::CURRENT) # 2012-06-27 11:41:33 +0900
+@orders.each do |order|
+  report.page.list(:list).add_row do |row|
+    row.item(:col1).value order.name
+    row.item(:col2).value order.num
+  end
+end

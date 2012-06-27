@@ -1,0 +1,3 @@
+report.start_new_page
+report.page.values :printed_at => current_time
+

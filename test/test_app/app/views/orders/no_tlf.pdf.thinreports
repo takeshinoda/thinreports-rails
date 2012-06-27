@@ -1,0 +1,2 @@
+report.set_layout :tlf => 'orders/no_tlf'
+report.partial! 'header'

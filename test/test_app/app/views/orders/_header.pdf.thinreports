@@ -1,0 +1,2 @@
+report.start_new_page
+report.page.values :printed_at => Time.at(OrdersController::CURRENT) # 2012-06-27 11:41:33 +0900
