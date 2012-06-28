@@ -23,7 +23,7 @@ Or install it yourself as:
 
 ## Usage
 
-### PDF is display in the browser.
+### Example to, Display in the browser.
 
 #### Controllers
 ``` ruby
@@ -50,7 +50,7 @@ report.page.values printed_at: Time.now
 end
 ```
 
-### Download
+### Example to, Download PDF.
 
 ``` ruby
 class OrdersController < ApplicationController
@@ -69,11 +69,13 @@ end
 
 ### Layout file(.tlf) and options.
 
-To app/views/reports/index.tlf for example. 
-Write code like this to index.pdf.thinreports.
+Example of using the `app/views/reports/index.tlf`.
+Write code like this to `index.pdf.thinreports`.
+
+`:layout_options` is an option `ThinReports::Report::Base#use_layout` method.
 
 ``` ruby
-report.set_layout tlf: 'reports/index', default: true
+report.set_layout tlf: 'reports/index', :layout_options => { default: true }
 ```
 
 ### generate options.
@@ -91,8 +93,8 @@ report.generate_options(security: {
 
 ### Partial
 
-For exsample to use, app/views/orders/_header.pdf.thinreports.
-title is local variable in _header.pdf.thinreports.
+For exsample to use, `app/views/orders/_header.pdf.thinreports`.
+`title` is local variable in `_header.pdf.thinreports`.
 
 ``` ruby
 report.partial! 'header', title: title
@@ -100,8 +102,8 @@ report.partial! 'header', title: title
 
 ## Authour
 
-TwitterID: @takeshinoda
-Blog: http://d.hatena.ne.jp/takeshinoda/
+* TwitterID: @takeshinoda
+* Blog: http://d.hatena.ne.jp/takeshinoda/
 
 ## Contributing
 
