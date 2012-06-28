@@ -75,7 +75,7 @@ Write code like this to `index.pdf.thinreports`.
 `:layout_options` is an option `ThinReports::Report::Base#use_layout` method.
 
 ``` ruby
-report.set_layout tlf: 'reports/index', :layout_options => { default: true }
+report.set_layout tlf: 'reports/index', layout_options: { default: true }
 ```
 
 ### generate options.
