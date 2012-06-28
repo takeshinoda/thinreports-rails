@@ -13,6 +13,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "thinreports-handler"
   gem.require_paths = ["lib"]
-  gem.version       = Thinreports::Handler::VERSION
+  gem.version       = ThinreportsHandler::VERSION
   gem.add_dependency "thinreports", '~>0.7.0'
 end

@@ -25,7 +25,7 @@ module ThinreportsHandler
     end
 
     def search_tlf_path(virtual_path)
-      virtual_path ? virtual_path + '.tlf': "#{@_template_virtual_path}.tlf"
+      "#{virtual_path || @_template_virtual_path}.tlf"
     end
 
     def generate_options(options)

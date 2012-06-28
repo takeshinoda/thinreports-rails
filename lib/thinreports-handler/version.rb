@@ -1,5 +1,3 @@
-module Thinreports
-  module Handler
-    VERSION = "0.1.0"
-  end
+module ThinreportsHandler
+  VERSION = "0.1.1"
 end
