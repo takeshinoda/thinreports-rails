@@ -4,13 +4,13 @@ require 'rubygems'
 
 require 'test/unit'
 
-require 'thinreports-handler'
+require 'thinreports-rails'
 require 'test_app/test_app'
 
 require 'rails'
 require 'rails/test_help'
 
-class ThinReportsHandlerTest < ActionController::TestCase
+class ThinReportsRailsTest < ActionController::TestCase
   tests OrdersController
 
   test 'index.tlf is selected.' do

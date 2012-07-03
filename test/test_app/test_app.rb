@@ -1,17 +1,17 @@
 require 'action_controller/railtie'
 require 'action_view/railtie'
 
-module ThinreportsHandlerTestApp
+module ThinreportsRailsTestApp
   class Application < Rails::Application
     config.active_support.deprecation = :log
     config.root = File.dirname(__FILE__)
   end
 end
-ThinreportsHandlerTestApp::Application.initialize!
+ThinreportsRailsTestApp::Application.initialize!
 
 
 # Route
-ThinreportsHandlerTestApp::Application.routes.draw do
+ThinreportsRailsTestApp::Application.routes.draw do
   resources :orders, :only => [:index] do
     collection do
       get 'no_tlf'

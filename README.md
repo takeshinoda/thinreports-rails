@@ -1,5 +1,7 @@
-# ThinreportsHandler
-ThinReporsHandler is constructed by Rails Template Handler [ThinReports](http://www.thinreports.org/ "ThinReposts") the PDF.
+# ThinreportsRails
+ThinReporsRails is constructed by Rails Template Handler [ThinReports](http://www.thinreports.org/ "ThinReposts") the PDF.
+
+Oldname: thinreports-handler
 
 ## Supported versions
 
@@ -11,7 +13,7 @@ ThinReporsHandler is constructed by Rails Template Handler [ThinReports](http://
 
 Add this line to your application's Gemfile:
 
-    gem 'thinreports-handler'
+    gem 'thinreports-rails'
 
 And then execute:
 
@@ -19,7 +21,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install thinreports-handler
+    $ gem install thinreports-rails
 
 ## Usage
 

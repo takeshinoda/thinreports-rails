@@ -3,7 +3,7 @@ require 'delegate'
 require 'active_support/core_ext'
 require 'thinreports'
 
-module ThinreportsHandler
+module ThinreportsRails
   class ThinreportsTemplate < SimpleDelegator  
     attr_accessor :_generate_options
 
@@ -57,7 +57,7 @@ module ThinreportsHandler
         else
           generate_options = nil
           ThinReports::Report.create do |__report__|
-            report = ThinreportsHandler::ThinreportsTemplate.new(__report__, self, '#{template.virtual_path}') 
+            report = ThinreportsRails::ThinreportsTemplate.new(__report__, self, '#{template.virtual_path}') 
 
             #{template.source}
 
@@ -69,5 +69,5 @@ module ThinreportsHandler
   end
 end
 
-ActionView::Template.register_template_handler :thinreports, ThinreportsHandler::TemplateHandler
+ActionView::Template.register_template_handler :thinreports, ThinreportsRails::TemplateHandler
 
