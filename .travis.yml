@@ -1,0 +1,15 @@
+language: ruby
+script: ruby test/thinreports-rails_test.rb
+rvm:
+  - 1.9.3
+  - 1.8.7
+  - jruby-18mode
+  - jruby-19mode
+gemfile:
+  - gemfiles/Gemfile-rails.3.0.x
+  - gemfiles/Gemfile-rails.3.1.x
+  - gemfiles/Gemfile-rails.3.2.x
+jdk:
+  - oraclejdk7
+  - oraclejdk6
+
