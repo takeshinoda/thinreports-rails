@@ -102,7 +102,7 @@ For exsample to use, `app/views/orders/_header.pdf.thinreports`.
 report.partial! 'header', title: title
 ```
 
-## Authour
+## Author
 
 * TwitterID: @takeshinoda
 * Blog: http://d.hatena.ne.jp/takeshinoda/
