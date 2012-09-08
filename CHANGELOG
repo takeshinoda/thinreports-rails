@@ -1,5 +1,6 @@
 
 == 0.1.3
+ * Require: thinreports 0.7.6 later
  * report.set_layout method is not required.
   (See:
   https://github.com/thinreports/thinreports-generator/commit/82660ff2d05c8b984e1298ab2569d266ffbf9171)
