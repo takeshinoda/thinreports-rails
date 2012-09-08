@@ -1,0 +1,7 @@
+report.partial! 'header'
+@orders.each do |order|
+  report.page.list(:list).add_row do |row|
+    row.item(:col1).value order.name
+    row.item(:col2).value order.num
+  end
+end

@@ -41,7 +41,6 @@ end
 app/views/orders/index.pdf.thinreports 
 
 ``` ruby
-report.set_layout # ! <= Required. default use: orders/index.tlf
 report.start_new_page
 report.page.values printed_at: Time.now
 @orders.each do |order|

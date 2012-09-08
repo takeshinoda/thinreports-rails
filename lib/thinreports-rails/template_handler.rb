@@ -42,7 +42,7 @@ module ThinreportsRails
           return self.use_layout(full_path, *([_options[:layout_options]].compact))
         end
       end
-      raise("#{tlf_path} not found.")
+      raise("#{tlf_path} not found.") unless _options[:allow_no_layout]
     end
   end
 
@@ -58,6 +58,7 @@ module ThinreportsRails
           generate_options = nil
           ThinReports::Report.create do |__report__|
             report = ThinreportsRails::ThinreportsTemplate.new(__report__, self, '#{template.virtual_path}') 
+            report.set_layout :allow_no_layout => true
 
             #{template.source}
 

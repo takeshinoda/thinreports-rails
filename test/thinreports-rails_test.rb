@@ -23,6 +23,11 @@ class ThinReportsRailsTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'use default tlf. no call set_layout. ' do
+    get :no_set_layout, :format => :pdf
+    assert_response :success
+  end
+
   test 'tlf can not choose not. raise Exception.' do
     assert_raise(ActionView::Template::Error) { get :no_tlf, :format => :pdf }
   end

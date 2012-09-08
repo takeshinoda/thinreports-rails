@@ -16,6 +16,7 @@ ThinreportsRailsTestApp::Application.routes.draw do
     collection do
       get 'no_tlf'
       get 'other_tlf_path'
+      get 'no_set_layout'
     end
   end
 end
@@ -47,5 +48,6 @@ class OrdersController < ApplicationController
   end
   alias no_tlf index
   alias other_tlf_path index
+  alias no_set_layout index
 end
 
