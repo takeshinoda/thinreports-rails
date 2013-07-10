@@ -3,6 +3,10 @@ require 'action_view/railtie'
 
 module ThinreportsRailsTestApp
   class Application < Rails::Application
+    if Rails.version >= '4.0.0'
+      config.eager_load = false
+      config.secret_key_base = 'aaaaaaaaa'
+    end
     config.active_support.deprecation = :log
     config.root = File.dirname(__FILE__)
   end
