@@ -5,8 +5,8 @@ Oldname: thinreports-handler
 
 ## Supported versions
 
-* Ruby 1.8.7, 1.9.3
-* Rails 3.0.X, 3.1.X, 3.2.X
+* Ruby 1.8.7, 1.9.3, 2.0.0
+* Rails 3.0.X, 3.1.X, 3.2.X, 4.0.X
 * ThinReports 0.7.6 later
 
 ## Installation
