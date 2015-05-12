@@ -3,7 +3,6 @@ script: ruby test/thinreports-rails_test.rb
 rvm:
   - 2.0.0
   - 1.9.3
-  - 1.8.7
 gemfile:
   - gemfiles/Gemfile-rails.3.0.x
   - gemfiles/Gemfile-rails.3.1.x
