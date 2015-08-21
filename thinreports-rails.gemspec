@@ -15,5 +15,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = ThinreportsRails::VERSION
   gem.add_dependency "thinreports", '~>0.8'
+  gem.add_development_dependency "minitest"
 end
 

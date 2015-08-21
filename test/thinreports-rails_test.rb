@@ -2,7 +2,7 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'rubygems'
 
-require 'test/unit'
+require 'minitest/autorun'
 
 require 'thinreports-rails'
 require 'test_app/test_app'
