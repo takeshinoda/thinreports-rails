@@ -1,14 +1,22 @@
+# coding: utf-8
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
+
 require 'rubygems'
 
-require 'minitest/autorun'
+require 'rails'
+
+if Rails.version[0..2] >= '4.1'
+  require 'minitest/autorun'
+else
+  require 'test/unit'
+end
+
+require 'rack/test'
+require 'rails/test_help'
 
 require 'thinreports-rails'
 require 'test_app/test_app'
-
-require 'rails'
-require 'rails/test_help'
 
 class ThinReportsRailsTest < ActionController::TestCase
   tests OrdersController
