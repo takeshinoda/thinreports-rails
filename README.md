@@ -1,5 +1,5 @@
 # ThinreportsRails
-ThinReporsRails is constructed by Rails Template Handler [ThinReports](http://www.thinreports.org/ "ThinReposts") the PDF.
+ThinreportsRails is constructed by Rails Template Handler [ThinReports](http://www.thinreports.org/ "ThinReposts") the PDF.
 
 [![Build Status](https://travis-ci.org/takeshinoda/thinreports-rails.svg?branch=master)](https://travis-ci.org/takeshinoda/thinreports-rails)
 
