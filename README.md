@@ -10,7 +10,7 @@ Oldname: thinreports-handler
 
 * Ruby 1.9.3, 2.0.X, 2.1.X, 2.2.X, 2.3.X
 * Rails 3.X, 4.X
-* ThinReports 0.9.1 later
+* ThinReports 0.10.0 or later
 
 ## Installation
 
@@ -41,7 +41,7 @@ end
 
 #### Views
 
-app/views/orders/index.pdf.thinreports 
+app/views/orders/index.pdf.thinreports
 
 ``` ruby
 report.start_new_page
@@ -61,7 +61,7 @@ class OrdersController < ApplicationController
   def index
     @orders = Order.all
     respond_to do |format|
-      format.pdf { 
+      format.pdf {
         send_data render_to_string, filename: 'foo.pdf', type: 'application/pdf', disposition: 'attachment'
       }
     end
@@ -69,7 +69,7 @@ class OrdersController < ApplicationController
 end
 ```
 
-### Configuration 
+### Configuration
 
 ### Layout file(.tlf) and options.
 
@@ -84,13 +84,13 @@ report.set_layout tlf: 'reports/index', layout_options: { default: true }
 
 ### generate options.
 ``` ruby
-report.generate_options(security: { 
+report.generate_options(security: {
   user_password: 'foo',
   owner_password: 'bar',
-  permissions: { 
+  permissions: {
     print_document: false,
     modify_contents: false,
-    copy_contents: false 
+    copy_contents: false
   }
 })
 ```
@@ -116,4 +116,3 @@ m(__)m, send me pull request.
 ## Copyright
 
 Copyright (c) 2012 Takeshi Shinoda.
-
