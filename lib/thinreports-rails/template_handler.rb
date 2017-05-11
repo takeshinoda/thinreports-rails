@@ -4,7 +4,7 @@ require 'active_support/core_ext'
 require 'thinreports'
 
 module ThinreportsRails
-  class ThinreportsTemplate < SimpleDelegator  
+  class ThinreportsTemplate < SimpleDelegator
     attr_accessor :_generate_options
 
     def initialize(thinreports_report_base_obj, template_context, template_virtual_path)
@@ -56,8 +56,8 @@ module ThinreportsRails
           #{template.source}
         else
           generate_options = nil
-          ThinReports::Report.create do |__report__|
-            report = ThinreportsRails::ThinreportsTemplate.new(__report__, self, '#{template.virtual_path}') 
+          Thinreports::Report.create do |__report__|
+            report = ThinreportsRails::ThinreportsTemplate.new(__report__, self, '#{template.virtual_path}')
             report.set_layout :allow_no_layout => true
 
             #{template.source}
@@ -71,4 +71,3 @@ module ThinreportsRails
 end
 
 ActionView::Template.register_template_handler :thinreports, ThinreportsRails::TemplateHandler
-
