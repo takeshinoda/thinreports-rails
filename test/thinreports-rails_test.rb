@@ -18,7 +18,7 @@ require 'rails/test_help'
 require 'thinreports-rails'
 require 'test_app/test_app'
 
-class ThinReportsRailsTest < ActionController::TestCase
+class ThinreportsRailsTest < ActionController::TestCase
   tests OrdersController
 
   test 'index.tlf is selected.' do
@@ -40,4 +40,3 @@ class ThinReportsRailsTest < ActionController::TestCase
     assert_raise(ActionView::Template::Error) { get :no_tlf, :format => :pdf }
   end
 end
-
