@@ -4,8 +4,8 @@ require File.expand_path('../lib/thinreports-rails/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Takeshi Shinoda"]
   gem.email         = ["takeshinoda@gmail.com"]
-  gem.description   = %q{Rails plugin for Thinreports DSL.}
-  gem.summary       = %q{Rails plugin for Thinreports DSL.}
+  gem.description   = %q{Rails plugin for ThinReports DSL. This plugin can write DSL to View.}
+  gem.summary       = %q{Rails plugin for ThinReports DSL.}
   gem.homepage      = "https://github.com/takeshinoda/thinreports-rails"
 
   gem.files         = `git ls-files`.split($\)
@@ -14,8 +14,8 @@ Gem::Specification.new do |gem|
   gem.name          = "thinreports-rails"
   gem.require_paths = ["lib"]
   gem.version       = ThinreportsRails::VERSION
-  gem.add_dependency "thinreports", '>= 0.10.0'
 
-  gem.add_development_dependency 'bundler', '>= 1.0.0'
+  gem.add_runtime_dependency "thinreports", '>= 0.10'
+  gem.add_development_dependency 'bundler', '>= 1.10'
 end
 
