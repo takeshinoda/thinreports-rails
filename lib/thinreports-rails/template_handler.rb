@@ -50,17 +50,19 @@ module ThinreportsRails
     cattr_accessor :default_format
     self.default_format = 'application/pdf'
 
-    def self.call(template)
+    def self.call(template, source = nil)
+      source ||= template.source
+
       %{
         if defined?(report)
-          #{template.source}
+          #{source}
         else
           generate_options = nil
           Thinreports::Report.create do |__report__|
             report = ThinreportsRails::ThinreportsTemplate.new(__report__, self, '#{template.virtual_path}')
             report.set_layout :allow_no_layout => true
 
-            #{template.source}
+            #{source}
 
             generate_options = report._generate_options
           end.generate(*([generate_options].compact))
