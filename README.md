@@ -97,7 +97,7 @@ report.generate_options(security: {
 
 ### Partial
 
-For exsample to use, `app/views/orders/_header.pdf.thinreports`.
+For example to use, `app/views/orders/_header.pdf.thinreports`.
 `title` is local variable in `_header.pdf.thinreports`.
 
 ``` ruby
